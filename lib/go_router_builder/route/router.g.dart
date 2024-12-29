@@ -28,8 +28,8 @@ RouteBase get $myShellRoute => ShellRouteData.$route(
               routes: [
                 GoRouteData.$route(
                   path: ':id',
-                  parentNavigatorKey: UserRouteData.$parentNavigatorKey,
-                  factory: $UserRouteDataExtension._fromState,
+                  parentNavigatorKey: UserRoute.$parentNavigatorKey,
+                  factory: $UserRouteExtension._fromState,
                 ),
               ],
             ),
@@ -93,8 +93,8 @@ extension $UsersRouteExtension on UsersRoute {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $UserRouteDataExtension on UserRouteData {
-  static UserRouteData _fromState(GoRouterState state) => UserRouteData(
+extension $UserRouteExtension on UserRoute {
+  static UserRoute _fromState(GoRouterState state) => UserRoute(
         id: int.parse(state.pathParameters['id']!),
         state.uri.queryParameters['name'],
       );

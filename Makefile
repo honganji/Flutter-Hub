@@ -2,9 +2,6 @@ clean:
 	flutter clean
 	flutter pub get
 
-run_dev:
-	flutter run -d chrome --web-browser-flag "--disable-web-security"
-
 format:
 	dart fix --apply
 	dart format .

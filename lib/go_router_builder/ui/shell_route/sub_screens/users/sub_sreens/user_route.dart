@@ -6,8 +6,8 @@ import '../../../../../extension/extension_buildcontext.dart';
 import 'user/desktop/desktop_user_screen.dart';
 import 'user/mobile/mobile_user_screen.dart';
 
-class UserRouteData extends GoRouteData {
-  const UserRouteData(this.name, {required this.id});
+class UserRoute extends GoRouteData {
+  const UserRoute(this.name, {required this.id});
   final String? name;
   final int id;
   static final GlobalKey<NavigatorState> $parentNavigatorKey = rootNavigatorKey;
@@ -15,6 +15,6 @@ class UserRouteData extends GoRouteData {
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
       context.isDesktop
-          ? DesktopUserScreen(id, key: state.pageKey)
+          ? DesktopUserScreen(id, name, key: state.pageKey)
           : MobileUserScreen(id, key: state.pageKey);
 }
