@@ -1,16 +1,49 @@
-# flutter_hub
+<p align="center">
+  <br />
+  <img src="./assets/readme-images/ant_blue.png" alt="blue ant" width="200" height="200">
+  <br/>
+  <br />
+  <p align="center">
+<img src="https://img.shields.io/badge/Dart-blue?logo=dart"/>
+<img src="https://img.shields.io/badge/Flutter-blue?logo=flutter"/>
+</p>
 
-A new Flutter project.
+<br/>
 
-## Getting Started
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
-This project is a starting point for a Flutter application.
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+# Flutter Hub
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Flutter Hubでは、私の開発の過程で学んだことをシェアしていこうと思っています！
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+まずはこのプロジェクトのvscode上での実行の仕方を解説します。
+
+## 始める(Makefile)
+
+Makefileを作成しており、各パッケージのために作成されたプロジェクトを実行するための記述がされています。以下に主なコマンドの解説をしています。
+
+### gen
+
+build_runnerを実行することで、コード生成が必要なものに対して必要なコードを自動生成します。
+
+### run_〇〇
+
+各パッケージのために作られたプロジェクトを実行します。例えば、すべてのパッケージを融合させているmainプロジェクトを実行するには以下のコマンドを実行してください。
+
+```Makefile
+make run_main
+```
+
+## パッケージ集
+
+以下に各プロジェクトのReadmeのリンクを貼っているので、興味があるパッケージのものを読んでみてください。
+
+|リンク|説明|
+|----|-----------|
+|[go_router_builder](https://github.com/honganji/flutter_hub/tree/main/lib/go_router_builder/README.md)|ルーティングをサポートするためのパッケージである「go_router」に、パラメータの型安全性やパスの誤りを少なくする機能を追加している。|
+
+## Mainプロジェクト
+
+Mainプロジェクトでは、現在までに学習したパッケージすべてを融合して機能のデモンストレーションを載せています。
