@@ -13,7 +13,7 @@ class DesktopUsersListTile extends StatelessWidget {
       leading: const Icon(Icons.person),
       title: InkWell(
         onTap: () {
-          UserRouteData(null, id: index).go(context);
+          UserRoute('user$index', id: index).go(context);
         },
         child: Text('User $index'),
       ),

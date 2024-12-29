@@ -13,7 +13,7 @@ class MobileUsersListTile extends StatelessWidget {
       leading: const Icon(Icons.person),
       title: InkWell(
         onTap: () {
-          UserRouteData(null, id: index).go(context);
+          UserRoute(null, id: index).go(context);
         },
         child: Text('User $index'),
       ),

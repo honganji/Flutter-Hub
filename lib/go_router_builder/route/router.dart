@@ -29,7 +29,7 @@ final shellNavigatorKey = GlobalKey<NavigatorState>();
         TypedGoRoute<UsersRoute>(
           path: 'users',
           routes: <TypedRoute<RouteData>>[
-            TypedGoRoute<UserRouteData>(path: ':id'),
+            TypedGoRoute<UserRoute>(path: ':id'),
           ],
         ),
       ],
