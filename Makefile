@@ -11,12 +11,18 @@ format:
 	flutter analyze .
 
 gen:
-	flutter pub run build_runner build
+	dart run build_runner build
 
 gen_all:
-	flutter pub run build_runner build -d
+	dart run build_runner build -d
 
 logo_gen:
-	flutter pub run flutter_launcher_icons:main
+	dart run flutter_launcher_icons:main
 
-.PHONY: clean run_dev format gen gen_all logo_gen
+run_main:
+	flutter run -t lib/main/main.dart
+
+run_go_router_builder: gen
+	flutter run -t lib/go_router_builder/main.dart
+
+.PHONY: clean run_dev format gen gen_all logo_gen run_main run_go_router_builder
