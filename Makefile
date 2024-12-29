@@ -19,4 +19,10 @@ gen_all:
 logo_gen:
 	dart pub run flutter_launcher_icons:main
 
-.PHONY: clean run_dev format gen gen_all logo_gen
+run_main:
+	flutter run -t lib/main/main.dart
+
+run_go_router_builder:
+	flutter run -t lib/go_router_builder/main.dart
+
+.PHONY: clean run_dev format gen gen_all logo_gen run_main run_go_router_builder

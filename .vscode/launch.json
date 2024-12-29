@@ -8,20 +8,13 @@
       "name": "flutter_hub",
       "request": "launch",
       "type": "dart",
-      "program": "lib/main.dart"
+      "program": "lib/main/main.dart"
     },
     {
-      "name": "flutter_hub (profile mode)",
+      "name": "flutter_hub (go_router_builder)",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "profile",
-      "program": "lib/main_sub.dart"
-    },
-    {
-      "name": "flutter_hub (release mode)",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "release"
+      "program": "lib/go_router_builder/main.dart"
     }
   ]
 }

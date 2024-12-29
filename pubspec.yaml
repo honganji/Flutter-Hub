@@ -41,7 +41,7 @@ dev_dependencies:
   riverpod_lint: ^2.6.3
 
 flutter_gen:
-  output: lib/gen/
+  output: lib/main/gen/
   line_length: 80
   assets:
     outputs:
