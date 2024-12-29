@@ -3,6 +3,10 @@ import 'package:go_router/go_router.dart';
 
 import 'route/router.dart';
 
+/* 
+  rootからnavigatorをコントロールするためのkey
+  たとえばDialogにこのkeyを設定すればナビゲータにもoverlayが適応される
+ */
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 
 class App extends StatelessWidget {
@@ -14,6 +18,9 @@ class App extends StatelessWidget {
       routes: $appRoutes,
       initialLocation: '/',
       navigatorKey: rootNavigatorKey,
+      errorBuilder: (context, state) {
+        return ErrorRouteData(state.error.toString()).build(context, state);
+      },
     );
     return MaterialApp.router(
       theme: ThemeData(

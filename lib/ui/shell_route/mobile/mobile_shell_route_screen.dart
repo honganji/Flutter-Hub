@@ -22,11 +22,11 @@ class _MobileShellRouteScreenState extends State<MobileShellRouteScreen> {
       case 0:
         const HomeRoute().go(context);
         break;
-      case 1:
-        const AboutUsRoute().go(context);
-        break;
       case 2:
         const SettingRoute().go(context);
+        break;
+      case 3:
+        const UsersRouteData().go(context);
         break;
     }
   }
@@ -37,7 +37,7 @@ class _MobileShellRouteScreenState extends State<MobileShellRouteScreen> {
       appBar: AppBar(
         title: const Text('Mobile Flutter Hub'),
       ),
-      body: Expanded(child: widget.child),
+      body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -45,12 +45,12 @@ class _MobileShellRouteScreenState extends State<MobileShellRouteScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'About Us',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Setting',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info),
+            label: 'User',
           ),
         ],
         onTap: _onItemTapped,

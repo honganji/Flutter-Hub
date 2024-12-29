@@ -24,10 +24,10 @@ class _DesktopShellRouteScreenState extends State<DesktopShellRouteScreen> {
         const HomeRoute().go(context);
         break;
       case 1:
-        const AboutUsRoute().go(context);
+        const SettingRoute().go(context);
         break;
       case 2:
-        const SettingRoute().go(context);
+        const UsersRouteData().go(context);
         break;
     }
   }
@@ -38,7 +38,7 @@ class _DesktopShellRouteScreenState extends State<DesktopShellRouteScreen> {
       appBar: AppBar(
         title: const Text('Desktop Flutter Hub'),
       ),
-      body: Expanded(child: widget.child),
+      body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -46,12 +46,12 @@ class _DesktopShellRouteScreenState extends State<DesktopShellRouteScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'About Us',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Setting',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'User',
           ),
         ],
         onTap: _onItemTapped,
