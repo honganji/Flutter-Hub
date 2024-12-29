@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MobileUserDialog extends Page<void> {
-  const MobileUserDialog(this.id, {super.key});
+class MobileUserScreen extends Page<void> {
+  const MobileUserScreen(this.id, {super.key});
   final int id;
 
   @override

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../route/router.dart';
+import '../sub_screens/home/home_route.dart';
+import '../sub_screens/setting/setting_route.dart';
+import '../sub_screens/users/users_route.dart';
 
 class MobileShellRouteScreen extends StatefulWidget {
   const MobileShellRouteScreen(this.child, {super.key});
@@ -22,11 +25,11 @@ class _MobileShellRouteScreenState extends State<MobileShellRouteScreen> {
       case 0:
         const HomeRoute().go(context);
         break;
-      case 2:
+      case 1:
         const SettingRoute().go(context);
         break;
-      case 3:
-        const UsersRouteData().go(context);
+      case 2:
+        const UsersRoute().go(context);
         break;
     }
   }

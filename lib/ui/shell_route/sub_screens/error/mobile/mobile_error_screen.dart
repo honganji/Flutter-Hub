@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../route/router.dart';
+import '../../../../../route/router.dart';
+import '../../home/home_route.dart';
 
 class MobileErrorScreen extends StatelessWidget {
   const MobileErrorScreen(this.message, {super.key});

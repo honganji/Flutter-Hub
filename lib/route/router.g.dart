@@ -24,7 +24,7 @@ RouteBase get $myShellRoute => ShellRouteData.$route(
             ),
             GoRouteData.$route(
               path: 'users',
-              factory: $UsersRouteDataExtension._fromState,
+              factory: $UsersRouteExtension._fromState,
               routes: [
                 GoRouteData.$route(
                   path: ':id',
@@ -76,9 +76,8 @@ extension $SettingRouteExtension on SettingRoute {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $UsersRouteDataExtension on UsersRouteData {
-  static UsersRouteData _fromState(GoRouterState state) =>
-      const UsersRouteData();
+extension $UsersRouteExtension on UsersRoute {
+  static UsersRoute _fromState(GoRouterState state) => const UsersRoute();
 
   String get location => GoRouteData.$location(
         '/users',

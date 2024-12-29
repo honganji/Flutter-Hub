@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../route/router.dart';
+import '../sub_screens/home/home_route.dart';
+import '../sub_screens/setting/setting_route.dart';
+import '../sub_screens/users/users_route.dart';
 
 class DesktopShellRouteScreen extends StatefulWidget {
   const DesktopShellRouteScreen(this.child, {super.key});
@@ -27,7 +30,7 @@ class _DesktopShellRouteScreenState extends State<DesktopShellRouteScreen> {
         const SettingRoute().go(context);
         break;
       case 2:
-        const UsersRouteData().go(context);
+        const UsersRoute().go(context);
         break;
     }
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../route/router.dart';
+import '../../../../../route/router.dart';
+import '../../home/home_route.dart';
 
 class DesktopErrorScreen extends StatelessWidget {
   const DesktopErrorScreen(this.message, {super.key});
@@ -14,8 +15,8 @@ class DesktopErrorScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Error Message: $message'),
-            GestureDetector(
-              onTap: () => const HomeRoute().go(context),
+            ElevatedButton(
+              onPressed: () => const HomeRoute().go(context),
               child: const Text('Go Back'),
             ),
           ],
