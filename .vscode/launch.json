@@ -15,6 +15,12 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/go_router_builder/main.dart"
+    },
+    {
+      "name": "flutter_hub (riverpod)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/riverpod/main.dart"
     }
   ]
 }

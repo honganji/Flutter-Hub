@@ -43,6 +43,7 @@ make run_main
 |リンク|説明|
 |----|-----------|
 |[go_router_builder](https://github.com/honganji/Flutter-Hub/blob/main/lib/go_router_builder/README.md)|ルーティングをサポートするためのパッケージである「go_router」に、パラメータの型安全性やパスの誤りを少なくする機能を追加している。|
+|[Riverpod](https://github.com/honganji/Flutter-Hub/blob/main/lib/riverpod/README.md)|状態管理の代名詞。Providerをアップグレードさせたパッケージで、慣れれば状態管理がとても楽になる。|
 
 ## Mainプロジェクト
 

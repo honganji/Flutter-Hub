@@ -22,4 +22,8 @@ run_main:
 run_go_router_builder: gen
 	flutter run -t lib/go_router_builder/main.dart
 
-.PHONY: clean run_dev format gen gen_all logo_gen run_main run_go_router_builder
+run_riverpod: gen
+	flutter run -t lib/go_router_builder/main.dart
+
+.PHONY: clean run_dev format gen gen_all logo_gen run_main \
+				run_go_router_builder run_riverpod
