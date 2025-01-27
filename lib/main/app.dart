@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'route/router.dart';
-import 'ui/shell_route/sub_screens/error/error_route_data.dart';
+import 'config/route/router.dart';
+import 'presentation/pages/error/error_route_data.dart';
 
 /* 
   rootからnavigatorをコントロールするためのkey
