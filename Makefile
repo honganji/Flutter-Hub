@@ -1,3 +1,5 @@
+all: run_main
+
 clean:
 	flutter clean
 	flutter pub get
@@ -17,9 +19,16 @@ logo_gen:
 	dart run flutter_launcher_icons:main
 
 run_main:
+	flutter pub get
 	flutter run -t lib/main/main.dart
 
 run_go_router_builder: gen
+	flutter pub get
 	flutter run -t lib/go_router_builder/main.dart
 
-.PHONY: clean run_dev format gen gen_all logo_gen run_main run_go_router_builder
+run_hooks_riverpod:
+	flutter pub get
+	flutter run -t lib/hooks_riverpod/main.dart
+
+.PHONY: clean run_dev format gen gen_all logo_gen run_main \
+				run_go_router_builder run_hooks_riverpod
