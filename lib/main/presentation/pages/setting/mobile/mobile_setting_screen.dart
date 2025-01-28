@@ -19,7 +19,7 @@ class MobileSettingScreen extends HookConsumerWidget {
         ),
         const Text('Change the title'),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: TextField(
             controller: textController,
             decoration: InputDecoration(
