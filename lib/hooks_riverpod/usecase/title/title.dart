@@ -1,5 +1,6 @@
-import 'package:flutter_hub/hooks_riverpod/model/title/title.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../model/title/title.dart';
 
 part 'title.g.dart';
 
@@ -7,7 +8,7 @@ part 'title.g.dart';
 class TitleData extends _$TitleData {
   @override
   Title build() {
-    return Title(title: 'Flutter Hub');
+    return const Title(title: 'Flutter Hub');
   }
 
   void changeTitle(String title) {

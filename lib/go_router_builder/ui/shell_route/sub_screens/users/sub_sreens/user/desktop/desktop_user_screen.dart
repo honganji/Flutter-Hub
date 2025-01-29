@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class DesktopUserScreen extends Page<void> {
   const DesktopUserScreen(this.id, this.name, {super.key});
   final int id;
+  @override
   final String? name;
 
   @override

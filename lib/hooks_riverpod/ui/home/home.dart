@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_hub/hooks_riverpod/usecase/title/title.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../usecase/title/title.dart';
 import '../title/title_page.dart';
 
 class Home extends HookConsumerWidget {
@@ -23,7 +23,8 @@ class Home extends HookConsumerWidget {
               counter.value.toString(),
               style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            IconButton(onPressed: () => counter.value++, icon: Icon(Icons.add)),
+            IconButton(
+                onPressed: () => counter.value++, icon: const Icon(Icons.add)),
             ElevatedButton(
               onPressed: () => Navigator.push(
                 context,

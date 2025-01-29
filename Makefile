@@ -1,3 +1,5 @@
+LIB := lib
+
 all: run_main
 
 clean:
