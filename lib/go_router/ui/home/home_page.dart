@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,8 +10,17 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: const Center(
-        child: Text('Home Page'),
+      body: Center(
+        child: Column(
+          children: [
+            const Text('Home Page'),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => context.go('/home/detail'),
+              child: const Text('Go to Detail Page'),
+            ),
+          ],
+        ),
       ),
     );
   }

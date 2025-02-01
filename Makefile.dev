@@ -3,6 +3,13 @@ TMP := tmp
 
 all: run_main
 
+create:
+	@if [ -z "$(TARGET)" ]; then\
+		echo "Error": TARGET is not set;\
+		exit 1;\
+	fi
+	@cp -r $(LIB)/$(TMP) $(LIB)/$(TARGET)
+
 clean:
 	flutter clean
 	flutter pub get
@@ -33,6 +40,11 @@ run_hooks_riverpod:
 	flutter pub get
 	flutter run -t lib/hooks_riverpod/main.dart
 
+
+run_go_router:
+	flutter pub get
+	flutter run -t lib/go_router/main.dart
+        
 add_launch_config:
 	@if ! command -v jq &> /dev/null; then \
 		echo "Error: jq is not installed"; \
@@ -43,13 +55,6 @@ add_launch_config:
 		exit 1; \
 	fi
 	@jq '.configurations += [{"name": "flutter_hub ($(TARGET))", "request": "launch", "type": "dart", "program": "lib/$(TARGET)/main.dart"}]' .vscode/launch.json > .vscode/launch.json.tmp && mv .vscode/launch.json.tmp .vscode/launch.json
-
-create:
-	@if [ -z "$(TARGET)" ]; then\
-		echo "Error": TARGET is not set;\
-		exit 1;\
-	fi
-	@cp -r $(LIB)/$(TMP) $(LIB)/$(TARGET)
 
 .PHONY: clean run_dev format gen gen_all logo_gen run_main \
 				run_go_router_builder run_hooks_riverpod create
