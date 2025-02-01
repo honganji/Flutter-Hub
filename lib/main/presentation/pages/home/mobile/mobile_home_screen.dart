@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_hub/main/application/usecase/streams/japanese_stream.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../application/usecase/hooks/counter_hook.dart';
+import '../../../../application/usecase/streams/japanese_stream.dart';
 
 class MobileHomeScreen extends HookWidget {
   const MobileHomeScreen({super.key});
@@ -28,7 +28,7 @@ class MobileHomeScreen extends HookWidget {
         children: [
           const Text('mobile Home'),
           ElevatedButton(
-            onPressed: () => context.go("/errrrr"),
+            onPressed: () => context.go('/errrrr'),
             child: const Text('Error happens'),
           ),
           const SizedBox(height: 20),

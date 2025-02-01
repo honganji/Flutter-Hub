@@ -11,7 +11,7 @@ class DesktopHomeScreen extends StatelessWidget {
         children: [
           const Text('Desktop Home'),
           ElevatedButton(
-            onPressed: () => context.go("/errrrr"),
+            onPressed: () => context.go('/errrrr'),
             child: const Text('Error happens'),
           ),
         ],

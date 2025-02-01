@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_hub/main/application/usecase/title/title_usecase.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../application/usecase/title/title_usecase.dart';
 import '../../../config/route/router.dart';
 import '../../pages/home/home_route.dart';
 import '../../pages/setting/setting_route.dart';
 import '../../pages/users/users_route.dart';
 
 class MobileShellRouteScreen extends HookConsumerWidget {
+  const MobileShellRouteScreen(this.child, {super.key});
   final Widget child;
-  MobileShellRouteScreen(this.child, {super.key});
 
   void _onItemTapped(int newIndex, BuildContext context) {
     switch (newIndex) {
       case 0:
         const HomeRoute().go(context);
-        break;
       case 1:
         const SettingRoute().go(context);
-        break;
       case 2:
         const UsersRoute().go(context);
-        break;
     }
   }
 

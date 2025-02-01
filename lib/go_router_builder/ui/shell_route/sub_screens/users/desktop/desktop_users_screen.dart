@@ -9,12 +9,13 @@ class DesktopUserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (context, index) {
-            return DesktopUsersListTile(
-              index,
-            );
-          }),
+        itemCount: 3,
+        itemBuilder: (context, index) {
+          return DesktopUsersListTile(
+            index,
+          );
+        },
+      ),
     );
   }
 }

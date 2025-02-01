@@ -11,7 +11,7 @@ class MobileHomeScreen extends StatelessWidget {
         children: [
           const Text('mobile Home'),
           ElevatedButton(
-            onPressed: () => context.go("/errrrr"),
+            onPressed: () => context.go('/errrrr'),
             child: const Text('Error happens'),
           ),
         ],

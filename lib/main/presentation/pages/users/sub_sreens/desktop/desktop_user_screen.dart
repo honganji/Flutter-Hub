@@ -7,21 +7,22 @@ class DesktopUserScreen extends Page<void> {
   @override
   Route<void> createRoute(BuildContext context) {
     return DialogRoute(
-        context: context,
-        settings: this,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('User Detail'),
-            content: Text('User $id'),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text('Close'),
-              ),
-            ],
-          );
-        });
+      context: context,
+      settings: this,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('User Detail'),
+          content: Text('User $id'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }

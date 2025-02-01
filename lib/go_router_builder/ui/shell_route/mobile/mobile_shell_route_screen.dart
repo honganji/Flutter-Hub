@@ -24,13 +24,10 @@ class _MobileShellRouteScreenState extends State<MobileShellRouteScreen> {
     switch (index) {
       case 0:
         const HomeRoute().go(context);
-        break;
       case 1:
         const SettingRoute().go(context);
-        break;
       case 2:
         const UsersRoute().go(context);
-        break;
     }
   }
 
